@@ -11,7 +11,7 @@ export default function Footer() {
           <a href="#" className="hover:text-white transition-colors duration-300">Contact</a>
         </div>
         <p className="text-white/5 text-[9px] font-bold tracking-[0.4em] uppercase">
-          &copy; 2026 API-BENIN INTERNATIONAL. TOUS DROITS RÉSERVÉS.
+          &copy; 2026 LABORATOIRE INTERNATIONAL. TOUS DROITS RÉSERVÉS.
         </p>
       </div>
     </footer>
