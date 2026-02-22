@@ -10,10 +10,10 @@ export default function About() {
               <ShieldCheck size={14} /> Notre Mission
             </div>
             <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter mb-8">
-              Transformer la biodiversité en science.
+              L'excellence scientifique au service de tous.
             </h2>
             <p className="text-xl text-blue-100/60 leading-relaxed font-light">
-              Sous l'impulsion du Dr Valentin AGON, API-BENIN s'est imposé comme le leader de la pharmacopée moderne en Afrique, alliant traditions ancestrales et protocoles de recherche internationaux rigoureux.
+              Notre laboratoire allie les connaissances séculaires à une rigueur scientifique absolue pour développer des traitements qui changent la donne sur le continent africain et au-delà.
             </p>
           </div>
           
@@ -22,7 +22,7 @@ export default function About() {
                <div className="bg-blue-600/10 rounded-[3.5rem] p-16 aspect-square flex items-center justify-center relative overflow-hidden group">
                   <div className="text-center group-hover:scale-110 transition-transform duration-700">
                     <div className="text-8xl mb-6">🔬</div>
-                    <div className="text-white font-black text-xl uppercase tracking-[0.2em]">Innovation Locale</div>
+                    <div className="text-white font-black text-xl uppercase tracking-[0.2em]">Innovation</div>
                   </div>
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/5 to-transparent"></div>
                </div>
