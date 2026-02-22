@@ -6,6 +6,8 @@ import imgPalu from '../assets/products/apipalu.jpg.png';
 import imgVital from '../assets/products/apivital.jpg.png';
 import imgCvc from '../assets/products/cvc.jpg.png';
 
+const cleanDesc = (text) => text?.replace(/\s*\[cite:[^\]]*\]/g, '') ?? '';
+
 export default function FeaturedProducts() {
   const navigate = useNavigate();
 
@@ -59,7 +61,7 @@ export default function FeaturedProducts() {
               <h3 className="text-2xl font-black text-white mb-4 tracking-tight">{p.name}</h3>
               
               <p className="text-blue-100/50 leading-relaxed text-sm mb-10 flex-grow font-medium">
-                {p.desc}
+                {cleanDesc(p.desc)}
               </p>
               
               <button 
