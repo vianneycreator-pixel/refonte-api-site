@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-// Import des images
 import imgPalu from '../assets/products/apipalu.jpg.png';
 import imgVital from '../assets/products/apivital.jpg.png';
 import imgCvc from '../assets/products/cvc.jpg.png';
@@ -13,17 +12,17 @@ export default function FeaturedProducts() {
     {
       name: "API-PALU",
       image: imgPalu,
-      desc: "Phytomédicament antipaludéen de référence. Une solution naturelle et efficace, fierté de la recherche béninoise."
+      desc: "Antipaludéen de référence reconnu pour son efficacité d'action rapide. Une fierté de la pharmacopée moderne."
     },
     {
       name: "API-VITAL",
       image: imgVital,
-      desc: "Régulateur cardio-vasculaire complet. Aide efficacement à brûler les graisses et à éliminer le mauvais cholestérol."
+      desc: "Protecteur cardio-vasculaire de premier plan. Favorise la circulation et participe à l'élimination des graisses."
     },
     {
       name: "CVC-API",
       image: imgCvc,
-      desc: "Normalise la tension artérielle et facilite l'oxygénation des tissus pour une vitalité retrouvée."
+      desc: "Formule spécifiquement conçue pour stabiliser la tension et améliorer durablement l'oxygénation de l'organisme."
     }
   ];
 
@@ -50,6 +49,7 @@ export default function FeaturedProducts() {
                 <img 
                   src={p.image} 
                   alt={p.name} 
+                  loading="lazy"
                   className="max-h-full object-contain group-hover:scale-110 transition-transform duration-700 relative z-10" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-30"></div>
