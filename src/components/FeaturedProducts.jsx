@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+// Import des images
 import imgPalu from '../assets/products/apipalu.jpg.png';
 import imgVital from '../assets/products/apivital.jpg.png';
 import imgCvc from '../assets/products/cvc.jpg.png';
@@ -12,17 +13,17 @@ export default function FeaturedProducts() {
     {
       name: "API-PALU",
       image: imgPalu,
-      desc: "Antipaludéen de référence reconnu pour son efficacité d'action rapide. Une fierté de la pharmacopée moderne."
+      desc: "Phytomédicament antipaludéen naturel de référence, médaillé d'or à Genève pour son efficacité prouvée."
     },
     {
       name: "API-VITAL",
       image: imgVital,
-      desc: "Protecteur cardio-vasculaire de premier plan. Favorise la circulation et participe à l'élimination des graisses."
+      desc: "Régulateur cardio-vasculaire puissant qui aide à brûler les graisses et le mauvais cholestérol."
     },
     {
       name: "CVC-API",
       image: imgCvc,
-      desc: "Formule spécifiquement conçue pour stabiliser la tension et améliorer durablement l'oxygénation de l'organisme."
+      desc: "Solution naturelle pour normaliser la tension artérielle et faciliter l'oxygénation des tissus."
     }
   ];
 
