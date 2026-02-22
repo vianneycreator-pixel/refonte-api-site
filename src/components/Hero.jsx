@@ -18,7 +18,7 @@ export default function Hero() {
           </h1>
           
           <p className="mt-10 text-lg md:text-2xl text-blue-100/60 leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
-            API-BENIN produit des solutions locales pour répondre aux défis de santé du continent africain.
+            Le laboratoire panafricain qui développe des solutions naturelles de pointe pour la santé mondiale.
           </p>
 
           <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6">
