@@ -2,16 +2,16 @@ import { Award, Star, Globe } from 'lucide-react';
 
 export default function Awards() {
   const distinctions = [
-    { title: "Médaille d'Or", place: "Genève, Suisse", icon: <Award size={48} className="text-yellow-400" /> },
-    { title: "Grand Prix Oscar", place: "Développement", icon: <Star size={48} className="text-yellow-400" /> },
-    { title: "Brevet International", place: "OAPI", icon: <Globe size={48} className="text-yellow-400" /> }
+    { title: "Médaille d'Or", place: "Innovation", icon: <Award size={48} className="text-yellow-400" /> },
+    { title: "Grand Prix", place: "Excellence", icon: <Star size={48} className="text-yellow-400" /> },
+    { title: "Certifications", place: "Internationales", icon: <Globe size={48} className="text-yellow-400" /> }
   ];
 
   return (
     <section className="py-24 relative overflow-hidden bg-transparent">
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <h2 className="text-4xl md:text-5xl font-black text-white text-center mb-20 tracking-tighter">
-          Reconnaissance Internationale
+          Reconnaissance
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {distinctions.map((d, i) => (
