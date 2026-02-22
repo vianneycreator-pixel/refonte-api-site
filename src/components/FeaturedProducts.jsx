@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-// Import des images
 import imgPalu from '../assets/products/apipalu.jpg.png';
 import imgVital from '../assets/products/apivital.jpg.png';
 import imgCvc from '../assets/products/cvc.jpg.png';
@@ -41,7 +40,7 @@ export default function FeaturedProducts() {
             onClick={() => navigate('/produits')}
             className="hidden md:flex items-center gap-3 bg-white/5 backdrop-blur-md border border-white/10 text-white px-8 py-4 rounded-2xl font-bold text-sm hover:bg-white hover:text-blue-900 transition-all"
           >
-            Voir tout le catalogue
+            Voir tout le catalogue (20+)
           </button>
         </div>
 
