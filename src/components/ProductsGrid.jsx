@@ -12,11 +12,41 @@ export default function ProductsGrid() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const products = [
-    { name: "API-PALU", category: "Paludisme", image: imgPalu, desc: "Traitement antipaludéen majeur, reconnu mondialement.", details: "Action directe sur les souches résistantes pour un rétablissement rapide." },
-    { name: "API-VITAL", category: "Cardio", image: imgVital, desc: "Soutien majeur du métabolisme et du cœur.", details: "Aide à fluidifier le sang et à prévenir les accumulations graisseuses." },
-    { name: "CVC-API", category: "Tension", image: imgCvc, desc: "Régulateur de la tension artérielle 100% naturel.", details: "Assure un maintien constant de la pression sanguine et protège les vaisseaux." },
-    { name: "LAXATIF-API", category: "Digestion", image: imgLaxatif, desc: "Facilite le transit et détoxifie le foie en profondeur.", details: "Formule douce et efficace pour un système digestif totalement apaisé." },
-    { name: "POLLEN", category: "Énergie", image: imgPollen, desc: "Source d'énergie vitale pour vaincre la fatigue.", details: "Un concentré de nutriments pour recharger le corps et l'esprit." }
+    { 
+      name: "API-PALU", 
+      category: "Paludisme", 
+      image: imgPalu, 
+      desc: "Traitement antipaludéen majeur, reconnu mondialement.", 
+      details: "Action directe sur les souches résistantes pour un rétablissement rapide et naturel." 
+    },
+    { 
+      name: "API-VITAL", 
+      category: "Cardio", 
+      image: imgVital, 
+      desc: "Soutien majeur du métabolisme et du cœur.", 
+      details: "Aide à fluidifier le sang et à prévenir les accumulations graisseuses dans les artères." 
+    },
+    { 
+      name: "CVC-API", 
+      category: "Tension", 
+      image: imgCvc, 
+      desc: "Régulateur de la tension artérielle 100% naturel.", 
+      details: "Assure un maintien constant de la pression sanguine et protège efficacement les vaisseaux." 
+    },
+    { 
+      name: "LAXATIF-API", 
+      category: "Digestion", 
+      image: imgLaxatif, 
+      desc: "Facilite le transit et détoxifie le foie en profondeur.", 
+      details: "Formule douce pour un système digestif apaisé, traite ictère et constipation chronique." 
+    },
+    { 
+      name: "POLLEN", 
+      category: "Énergie", 
+      image: imgPollen, 
+      desc: "Source d'énergie vitale pour vaincre la fatigue.", 
+      details: "Un concentré de nutriments naturels pour recharger l'organisme et renforcer l'immunité." 
+    }
   ];
 
   const filtered = products.filter(p => p.name.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -29,7 +59,7 @@ export default function ProductsGrid() {
             <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-white/20 group-focus-within:text-green-500 transition-colors" size={20} />
             <input 
               type="text" 
-              placeholder="Rechercher un produit ou symptôme..." 
+              placeholder="Rechercher un produit..." 
               className="w-full bg-white/5 backdrop-blur-2xl border border-white/10 pl-14 pr-6 py-5 rounded-[2rem] text-white outline-none focus:border-green-500/50 transition-all shadow-2xl"
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -65,8 +95,8 @@ export default function ProductsGrid() {
       </div>
 
       {selectedProduct && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-blue-950/90 backdrop-blur-3xl animate-in fade-in duration-300">
-          <div className="bg-white rounded-[4rem] max-w-2xl w-full p-8 md:p-14 relative shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)]">
+        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-blue-950/90 backdrop-blur-3xl">
+          <div className="bg-white rounded-[4rem] max-w-2xl w-full p-8 md:p-14 relative shadow-2xl">
             <button onClick={() => setSelectedProduct(null)} className="absolute top-8 right-8 p-3 bg-gray-100 hover:bg-red-50 hover:text-red-500 rounded-full transition-all">
               <X size={24} />
             </button>
@@ -84,7 +114,7 @@ export default function ProductsGrid() {
             <div className="bg-blue-50/50 p-10 rounded-[2.5rem] border border-blue-100/50">
               <p className="text-blue-900 leading-relaxed text-xl font-medium italic">"{selectedProduct.details}"</p>
             </div>
-            <button onClick={() => setSelectedProduct(null)} className="mt-12 w-full py-5 bg-blue-900 text-white font-black uppercase tracking-widest rounded-3xl text-sm hover:bg-green-600 transition-all shadow-xl">
+            <button onClick={() => setSelectedProduct(null)} className="mt-12 w-full py-5 bg-blue-900 text-white font-black uppercase tracking-widest rounded-3xl text-sm hover:bg-green-600 transition-all">
               Fermer
             </button>
           </div>
