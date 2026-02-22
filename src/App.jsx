@@ -36,15 +36,15 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-[#050a15] min-h-screen font-sans antialiased">
+    <div className="bg-[#050a15] min-h-screen font-sans antialiased selection:bg-green-500 selection:text-white">
       <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={
           <>
             <Hero />
-            <About />
             <FeaturedProducts />
+            <About />
             <Awards />
             <Impact />
             <Footer />
