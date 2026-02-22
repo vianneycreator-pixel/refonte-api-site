@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Search, FileText, X, CheckCircle2 } from 'lucide-react';
 
-// Imports images
 import imgPalu from '../assets/products/apipalu.jpg.png';
 import imgVital from '../assets/products/apivital.jpg.png';
 import imgCvc from '../assets/products/cvc.jpg.png';
@@ -13,11 +12,11 @@ export default function ProductsGrid() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const products = [
-    { name: "API-PALU", category: "Paludisme", image: imgPalu, desc: "Solution antipaludéenne naturelle hautement efficace.", details: "Phytomédicament scientifiquement validé pour le traitement des formes simples de paludisme. Une fierté de la recherche africaine." },
-    { name: "API-VITAL", category: "Cardio", image: imgVital, desc: "Régulateur cardio-vasculaire et brûleur de graisses.", details: "Aide à maintenir une tension artérielle saine, débouche les artères et élimine le mauvais cholestérol." },
-    { name: "CVC-API", category: "Tension", image: imgCvc, desc: "Hypotenseur et fluidificateur sanguin naturel.", details: "Normalise le taux de cholestérol et facilite l'oxygénation des tissus pour une meilleure vitalité." },
-    { name: "LAXATIF-API", category: "Digestion", image: imgLaxatif, desc: "Soin complet du foie et du système digestif.", details: "Efficace contre la constipation, les hémorroïdes, l'ictère et les troubles digestifs chroniques." },
-    { name: "POLLEN", category: "Énergie", image: imgPollen, desc: "Complément revitalisant 100% naturel.", details: "Idéal contre la fatigue générale, le surmenage et pour renforcer le système immunitaire naturellement." }
+    { name: "API-PALU", category: "Paludisme", image: imgPalu, desc: "Traitement antipaludéen majeur, reconnu mondialement.", details: "Action directe sur les souches résistantes pour un rétablissement rapide." },
+    { name: "API-VITAL", category: "Cardio", image: imgVital, desc: "Soutien majeur du métabolisme et du cœur.", details: "Aide à fluidifier le sang et à prévenir les accumulations graisseuses." },
+    { name: "CVC-API", category: "Tension", image: imgCvc, desc: "Régulateur de la tension artérielle 100% naturel.", details: "Assure un maintien constant de la pression sanguine et protège les vaisseaux." },
+    { name: "LAXATIF-API", category: "Digestion", image: imgLaxatif, desc: "Facilite le transit et détoxifie le foie en profondeur.", details: "Formule douce et efficace pour un système digestif totalement apaisé." },
+    { name: "POLLEN", category: "Énergie", image: imgPollen, desc: "Source d'énergie vitale pour vaincre la fatigue.", details: "Un concentré de nutriments pour recharger le corps et l'esprit." }
   ];
 
   const filtered = products.filter(p => p.name.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -25,7 +24,6 @@ export default function ProductsGrid() {
   return (
     <section className="py-24 bg-transparent min-h-screen">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Barre de recherche Glass */}
         <div className="mb-16 max-w-md mx-auto">
           <div className="relative group">
             <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-white/20 group-focus-within:text-green-500 transition-colors" size={20} />
@@ -38,7 +36,6 @@ export default function ProductsGrid() {
           </div>
         </div>
 
-        {/* Grille de produits */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {filtered.map((p, i) => (
             <div key={i} className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[3.5rem] overflow-hidden hover:bg-white/10 transition-all duration-500 group flex flex-col shadow-2xl">
@@ -67,7 +64,6 @@ export default function ProductsGrid() {
         </div>
       </div>
 
-      {/* Modal Détails Glassmorphism */}
       {selectedProduct && (
         <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-blue-950/90 backdrop-blur-3xl animate-in fade-in duration-300">
           <div className="bg-white rounded-[4rem] max-w-2xl w-full p-8 md:p-14 relative shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)]">
